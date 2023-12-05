@@ -1,0 +1,76 @@
+{
+    "name": "nfephp-org/sped-gtin",
+    "type": "library",
+    "description": "Classes for validation of GTIN codes.",
+    "keywords": [
+        "nfe",
+        "nfce",
+        "sped",
+        "nfephp",
+        "gtin"
+    ],
+    "homepage": "https://github.com/nfephp-org/sped-gtin",
+    "license": [
+        "LGPL-3.0-or-later",
+        "GPL-3.0-or-later",
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Roberto L. Machado",
+            "email": "linux.rlm@gmail.com.br",
+            "homepage": "https://github.com/nfephp-org",
+            "role": "Developer"
+        },
+        {
+            "name": "Gustavo Lidani",
+            "email": "lidanig0@gmail.com",
+            "homepage": "https://github.com/lidani",
+            "role": "Developer"
+        },
+        {
+            "name": "Comunidade NFePHP",
+            "homepage": "https://github.com/nfephp-org/sped-gtin/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4",
+        "ext-dom": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-soap": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "ext-libxml": "*",
+        "nfephp-org/sped-common": "^5.1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "dev-master",
+        "phpunit/phpunit": "^9.3",
+        "scrutinizer/ocular": "^1.8",
+        "phpstan/phpstan": "^1.4",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "NFePHP\\Gtin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NFePHP\\Gtin\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist",
+        "phpcbf": "vendor/bin/phpcbf src/ tests/",
+        "phpcs": "vendor/bin/phpcs src/ tests/",
+        "stan": "vendor/bin/phpstan analyse src/ tests/"
+    },
+    "extra": {
+        "branch-alias": {
+            "v1.0": "1.0-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}

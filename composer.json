@@ -1,0 +1,7 @@
+{
+    "require": {
+        "nfephp-org/sped-nfe": "^5.1",
+        "nfephp-org/sped-da": "^1.1",
+        "nfephp-org/sped-common": "^5.1"
+    }
+}

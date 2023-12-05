@@ -1,0 +1,70 @@
+{
+    "name": "nfephp-org/sped-da",
+    "type": "library",
+    "description": "sped-da contêm as classes para criação dos documentos auxiliares referidos no projeto Sped.",
+    "keywords": [
+        "nfe",
+        "sped",
+        "nfephp",
+        "Danfe",
+        "Dacte",
+        "CCe"
+    ],
+    "homepage": "https://github.com/nfephp-org/sped-da",
+    "license": [
+        "LGPL-3.0-or-later+",
+        "GPL-3.0-or-later",
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Roberto L. Machado",
+            "email": "linux.rlm@gmail.com.br",
+            "homepage": "http://www.nfephp.org",
+            "role": "Developer"
+        },
+        {
+            "name": "Comunidade NFePHP",
+            "homepage": "https://github.com/nfephp-org/sped-da/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4",
+        "ext-dom": "*",
+        "ext-gd": "*",
+        "tecnickcom/tc-lib-barcode": "^1",
+        "nfephp-org/sped-common": "^5.1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.3",
+        "scrutinizer/ocular": "^1.8",
+        "phpstan/phpstan": "^1.4",
+        "sebastian/phpcpd": "^6.0"
+    },
+    "suggest": {
+        "nfephp-org/posprint": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NFePHP\\DA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NFePHP\\DA\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist",
+        "phpcbf": "vendor/bin/phpcbf --standard=psr2 src",
+        "phpcs": "vendor/bin/phpcs --standard=psr2 src",
+        "stan": "vendor/bin/phpstan analyse src/ --level 1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.x-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}
